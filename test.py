@@ -105,16 +105,16 @@ class helloworld (wx.Frame):
 ###################buttons-main####################}
 
 ###################buttons - text####################{
-		logoImageFile = 'yourethedevlogo.jpg'
+		logoImageFile = '25x25.jpg'
 		logoImage_make = wx.Image(logoImageFile, wx.BITMAP_TYPE_ANY).ConvertToBitmap()
-		logoImage = wx.BitmapButton(txtpanel, id=-1, bitmap=logoImage_make, pos=(125, 40), size = (logoImage_make.GetWidth(), logoImage_make.GetHeight()))
+		logoImage = wx.BitmapButton(txtpanel, id=-1, bitmap=logoImage_make, pos=(475, 450), size = (logoImage_make.GetWidth()+5, logoImage_make.GetHeight()+5))
 		self.Bind(wx.EVT_BUTTON, self.returntomain, logoImage)	
 ###################buttons - text####################}
 
 ###################buttons-mrse####################{
-		logoImageFile = 'yourethedevlogo.jpg'
+		logoImageFile = '25x25.jpg'
 		logoImage_make = wx.Image(logoImageFile, wx.BITMAP_TYPE_ANY).ConvertToBitmap()
-		logoImage = wx.BitmapButton(mrsepanel, id=-1, bitmap=logoImage_make, pos=(125, 40), size = (logoImage_make.GetWidth(), logoImage_make.GetHeight()))
+		logoImage = wx.BitmapButton(mrsepanel, id=-1, bitmap=logoImage_make, pos=(475, 450), size = (logoImage_make.GetWidth()+5, logoImage_make.GetHeight()+5))
 		self.Bind(wx.EVT_BUTTON, self.returntomain, logoImage)
 ###################buttons-mrse####################}
 
