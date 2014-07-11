@@ -1,0 +1,44 @@
+file_menu:
+	-Save as Text
+	-Save as Morse
+	---
+	-Load from Text
+	-Load from Morse
+	---
+	-Exit Parser
+-------------------------------------------------------------------------------------->
+options_menu:
+	-Use Sound
+		-on
+			(RadioButtonbox)
+		-off
+		
+	-Morse Input
+		-Keyboard
+					(RadioButtonbox)
+		-Buttons
+		
+	-Punctuation
+		-Standard Punctuation
+							(RadioButtonbox)
+		-Morse Punctuation
+		---
+		-Standard spaces
+							(RadioButtonbox)	
+		-Spaces as '/'
+-------------------------------------------------------------------------------------->
+mode_menu:
+	-Text - Morse
+	-Morse - Text
+
+
+#######################################
+				    --Colour-Codes--
+
+skyblue2 = #3399ff
+
+YouAreTheDev
+	-'Green'	-->
+	-'Orange'	-->
+	-'Blue'		-->
+	
