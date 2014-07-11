@@ -11,20 +11,21 @@ class helloworld (wx.Frame):
 		global mrsepanel
 		global mainpanel
 		
-		mainpanel = wx.Panel( self )
-		mainpanel.SetBackgroundColour('white')
-		#mainpanel.Show()
-	
-		txtpanel = wx.Panel(self)
-		txtpanel.SetBackgroundColour('blue')
-		#txtpanel.Hide()
-
-		mrsepanel = wx.Panel(self)
-		mrsepanel.SetBackgroundColour('green')
-		#mrsepanel.Hide()
+		panel = wx.Panel(self)
 		
-		mrsepanel.Hide()
+		mainpanel = wx.Panel( panel )
+		mainpanel.SetBackgroundColour('white')
+
+		txtpanel = wx.Panel(panel)
 		txtpanel.Hide()
+		txtpanel.Raise()
+		txtpanel.SetBackgroundColour('blue')
+		self.Bind(wx.EVT_SIZE, self.onSize)		
+
+		mrsepanel = wx.Panel(panel)
+		mrsepanel.SetBackgroundColour('green')
+
+		mrsepanel.Hide()
 		mainpanel.Show()
 		
 ###################menubar#######################{
@@ -110,20 +111,36 @@ class helloworld (wx.Frame):
 		self.Bind(wx.EVT_BUTTON, self.returntomain, logoImage)	
 ###################buttons - text####################}
 
+###################buttons-mrse####################{
+		logoImageFile = 'yourethedevlogo.jpg'
+		logoImage_make = wx.Image(logoImageFile, wx.BITMAP_TYPE_ANY).ConvertToBitmap()
+		logoImage = wx.BitmapButton(mrsepanel, id=-1, bitmap=logoImage_make, pos=(125, 40), size = (logoImage_make.GetWidth(), logoImage_make.GetHeight()))
+		self.Bind(wx.EVT_BUTTON, self.returntomain, logoImage)
+###################buttons-mrse####################}
+
 	def quit(self, event):
 		self.Destroy()
 	
+	def onSize(self, event):
+		event.Skip()
+		mainpanel.SetSize(self.GetClientSizeTuple())
+		txtpanel.SetSize(self.GetClientSizeTuple())
+		mrsepanel.SetSize(self.GetClientSizeTuple())
+	
 	def returntomain(self, event):
+		mainpanel.SetPosition((0,0))
 		txtpanel.Hide()
 		mrsepanel.Hide()
 		mainpanel.Show()#
 	
 	def showtxt2mrse(self, event):
+		txtpanel.SetPosition((0,0))
 		mainpanel.Hide()
 		mrsepanel.Hide()
 		txtpanel.Show()#
 			
 	def showmrse2txt(self, event):
+		mrsepanel.SetPosition((0,0))
 		mainpanel.Hide()
 		txtpanel.Hide()
 		mrsepanel.Show()#		
