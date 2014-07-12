@@ -131,19 +131,19 @@ class helloworld (wx.Frame):
 		mainpanel.SetPosition((0,0))
 		txtpanel.Hide()
 		mrsepanel.Hide()
-		mainpanel.Show()#
+		mainpanel.Show()
 	
 	def showtxt2mrse(self, event):
 		txtpanel.SetPosition((0,0))
 		mainpanel.Hide()
 		mrsepanel.Hide()
-		txtpanel.Show()#
+		txtpanel.Show()
 			
 	def showmrse2txt(self, event):
 		mrsepanel.SetPosition((0,0))
 		mainpanel.Hide()
 		txtpanel.Hide()
-		mrsepanel.Show()#		
+		mrsepanel.Show()		
 		
 #running the wx.Frame
 if __name__ == '__main__':
