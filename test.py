@@ -19,11 +19,11 @@ class helloworld (wx.Frame):
 		txtpanel = wx.Panel(panel)
 		txtpanel.Hide()
 		txtpanel.Raise()
-		txtpanel.SetBackgroundColour('blue')
+		txtpanel.SetBackgroundColour('white')
 		self.Bind(wx.EVT_SIZE, self.onSize)		
 
 		mrsepanel = wx.Panel(panel)
-		mrsepanel.SetBackgroundColour('green')
+		mrsepanel.SetBackgroundColour('white')
 
 		mrsepanel.Hide()
 		mainpanel.Show()
@@ -94,7 +94,7 @@ class helloworld (wx.Frame):
 ###################buttons-main####################{
 		logoImageFile = 'yourethedevlogo.jpg'
 		logoImage_make = wx.Image(logoImageFile, wx.BITMAP_TYPE_ANY).ConvertToBitmap()
-		logoImage = wx.BitmapButton(mainpanel, id=-1, bitmap=logoImage_make, pos=(125, 40), size = (logoImage_make.GetWidth(), logoImage_make.GetHeight()))
+		logoImage = wx.BitmapButton(mainpanel, id=-1, bitmap=logoImage_make, pos=(125, 40), size = (logoImage_make.GetWidth(), logoImage_make.GetHeight()), style = wx.NO_BORDER)
 		self.Bind(wx.EVT_BUTTON, self.returntomain, logoImage)
 
 		txtmrseButton = wx.Button(mainpanel, label="Text -> Morse", pos=(25, 330), size=(200,125))
@@ -105,16 +105,16 @@ class helloworld (wx.Frame):
 ###################buttons-main####################}
 
 ###################buttons - text####################{
-		logoImageFile = '25x25.jpg'
+		logoImageFile = '25x25-2.png'
 		logoImage_make = wx.Image(logoImageFile, wx.BITMAP_TYPE_ANY).ConvertToBitmap()
-		logoImage = wx.BitmapButton(txtpanel, id=-1, bitmap=logoImage_make, pos=(475, 450), size = (logoImage_make.GetWidth()+5, logoImage_make.GetHeight()+5))
+		logoImage = wx.BitmapButton(txtpanel, id=-1, bitmap=logoImage_make, pos=(472, 450), size = (logoImage_make.GetWidth()+5, logoImage_make.GetHeight()+5), style = wx.NO_BORDER)
 		self.Bind(wx.EVT_BUTTON, self.returntomain, logoImage)	
 ###################buttons - text####################}
 
 ###################buttons-mrse####################{
-		logoImageFile = '25x25.jpg'
+		logoImageFile = '25x25-2.png'
 		logoImage_make = wx.Image(logoImageFile, wx.BITMAP_TYPE_ANY).ConvertToBitmap()
-		logoImage = wx.BitmapButton(mrsepanel, id=-1, bitmap=logoImage_make, pos=(475, 450), size = (logoImage_make.GetWidth()+5, logoImage_make.GetHeight()+5))
+		logoImage = wx.BitmapButton(mrsepanel, id=-1, bitmap=logoImage_make, pos=(472, 450), size = (logoImage_make.GetWidth()+5, logoImage_make.GetHeight()+5), style = wx.NO_BORDER)
 		self.Bind(wx.EVT_BUTTON, self.returntomain, logoImage)
 ###################buttons-mrse####################}
 
