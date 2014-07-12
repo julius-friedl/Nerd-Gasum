@@ -1,0 +1,23 @@
+Aufbau:
+
+	-class Compilier
+		-constructor method (GUI)
+			=2xCntrlBox
+			=1xDropdown to choose the output format, Radiobox
+			=1x'enter' button( calls method compiler)
+		
+		-method compile(stringtocompile(cntrlbox), output_format(dropdown))
+		
+		-menubar
+			-file
+				save to .txt
+				---------
+				exit
+			
+			-
+				
+			
+			
+		
+
+	
