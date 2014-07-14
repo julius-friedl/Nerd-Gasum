@@ -16,8 +16,14 @@ Aufbau:
 			
 			-
 				
-			
-			
+	
+extras__:
+	-menubar
+		-ability to change the font colour in all of the text fields
+		-ability to change the font size in all text fields
+	
+	-when dropdown select is morse-code
+		--> a second button appears beside the main compile button, which plays the morse code as dots and dashes			
 		
 
 	

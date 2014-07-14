@@ -32,7 +32,7 @@ class MainFrame(wx.Frame):
 ##########Drop-Down########################################################################//-->
 		hbox1 = wx.BoxSizer(wx.HORIZONTAL)
 		parse_options = ['Morse-Code','Binary-Code (n/a)', 'Leetspeak (n/a)']
-		dropdown = wx.ComboBox(mainpanel, -1, size=(175, 25), choices=parse_options, style=wx.CB_READONLY)
+		dropdown = wx.ComboBox(mainpanel, -1,'-None-', size=(175, 25), choices=parse_options, style=wx.CB_READONLY)
 		hbox1.Add(dropdown, flag=wx.RIGHT, border=8)
 		self.Bind(wx.EVT_COMBOBOX, self.onComboSelection, dropdown)
 		
@@ -85,19 +85,30 @@ class MainFrame(wx.Frame):
 		
 		if current_select == 'Morse-Code':
 			#parseMorseCode()
+			output_text.SetForegroundColour('black')
+			out_str = in_str
+			output_text.SetValue( out_str )
 			pass
 			
 		elif current_select == 'Binary-Code (n/a)':
 			#parseBinaryCode()	
+			output_text.SetForegroundColour('black')
+			out_str = in_str
+			output_text.SetValue( out_str )
 			pass
 			
 		elif current_select == 'Leetspeak (n/a)':
-			#parseLeetSpeak()	
+			#parseLeetSpeak()
+			output_text.SetForegroundColour('black')	
+			out_str = in_str
+			output_text.SetValue( out_str )
 			pass
+		
+		else:
+			output_text.SetForegroundColour('Red')
+			out_str = '!-- Please select a Code to Compile to  --!'
+			output_text.SetValue( out_str )	
 			
-			
-		out_str = in_str
-		output_text.SetValue( out_str )
 	
 	def onComboSelection(self, event):
 		current_select = dropdown.GetValue()
