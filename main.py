@@ -2,6 +2,7 @@
 
 import wx
 
+
 class MainFrame(wx.Frame):
 
 	def __init__(self, parent, id):

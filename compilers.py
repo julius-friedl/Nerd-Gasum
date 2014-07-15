@@ -1,5 +1,5 @@
 def compiler(str2betranslated, language):
-    if (language == "morseCode"):
+    if (language == "Morse-Code"):
         strword_space = '/ '
         Aa = '.- '
         Bb = '-... '
@@ -110,7 +110,5 @@ def compiler(str2betranslated, language):
         str2betranslated = [s.replace('z', Zz)for s in str2betranslated]
         
         str2morse_output = ''.join(str2betranslated)
+        output_text.SetValue("str2morse_output")
         return
-compiler("jojojo", "morseCode")
-print str2morse_output 
-print "Sao zack es wead losgehen! \n Ih wead hoffentlich die HAusssaufgaben gemacht ham   ne \ncassy wead auch schon dabei sein fedammt nochmaaa"
