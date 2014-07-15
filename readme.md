@@ -1,9 +1,9 @@
 #What the Heck is this?
 One day this will be the Ultimate Nerd Compiler for everything.
-At the moment we have planned compilers for Morse-Code, Binary Code and Leetspeak.
+At the moment compilers are planned for Morse-Code, Binary Code and Leetspeak.
 More is coming and we'd bee happy for every Fork and Star. :)
 #Documentation
-Well actually there is no documentation yet because at this moment the Software isn't doing anything, except making a neat little GUI.
+Well actually there is no documentation yet because at the moment the Software doesn't do anything, except make a neat little GUI.
 
 #License
 ##The MIT License (MIT)

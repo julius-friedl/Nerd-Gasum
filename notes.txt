@@ -1,44 +1,29 @@
-file_menu:
-	-Save as Text
-	-Save as Morse
-	---
-	-Load from Text
-	-Load from Morse
-	---
-	-Exit Parser
--------------------------------------------------------------------------------------->
-options_menu:
-	-Use Sound
-		-on
-			(RadioButtonbox)
-		-off
+Aufbau:
+
+	-class Compilier
+		-constructor method (GUI)
+			=2xCntrlBox
+			=1xDropdown to choose the output format, Radiobox
+			=1x'enter' button( calls method compiler)
 		
-	-Morse Input
-		-Keyboard
-					(RadioButtonbox)
-		-Buttons
+		-method compile(stringtocompile(cntrlbox), output_format(dropdown))
 		
-	-Punctuation
-		-Standard Punctuation
-							(RadioButtonbox)
-		-Morse Punctuation
-		---
-		-Standard spaces
-							(RadioButtonbox)	
-		-Spaces as '/'
--------------------------------------------------------------------------------------->
-mode_menu:
-	-Text - Morse
-	-Morse - Text
+		-menubar
+			-file
+				save to .txt
+				---------
+				exit
+			
+			-
+				
+	
+extras__:
+	-menubar
+		-ability to change the font colour in all of the text fields
+		-ability to change the font size in all text fields
+	
+	-when dropdown select is morse-code
+		--> a second button appears beside the main compile button, which plays the morse code as dots and dashes			
+		
 
-
-#######################################
-				    --Colour-Codes--
-
-skyblue2 = #3399ff
-
-YouAreTheDev
-	-'Green'	-->
-	-'Orange'	-->
-	-'Blue'		-->
 	
