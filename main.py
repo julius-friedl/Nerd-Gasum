@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import wx, time
+import wx
 
 class MainFrame(wx.Frame):
 
@@ -25,7 +25,7 @@ class MainFrame(wx.Frame):
 		mainpanel = wx.Panel(self)
 		mainpanel.Show()
 		mainpanel.Raise()
-		mainpanel.SetBackgroundColour('skyblue3')
+		#mainpanel.SetBackgroundColour('skyblue3')
 		self.Bind(wx.EVT_SIZE, self.onSize)
 		
 		vbox = wx.BoxSizer(wx.VERTICAL)
